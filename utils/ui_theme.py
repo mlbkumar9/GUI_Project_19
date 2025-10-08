@@ -15,6 +15,16 @@ DARK_COLORS = {
     'info': '#00bcf2',         # Info cyan
 }
 
+# Button color schemes for different actions
+BUTTON_COLORS = {
+    'primary': {'bg': '#5E81AC', 'fg': '#ECEFF4', 'active_bg': '#81A1C1'},
+    'success': {'bg': '#A3BE8C', 'fg': '#2E3440', 'active_bg': '#B5C9A4'},
+    'warning': {'bg': '#EBCB8B', 'fg': '#2E3440', 'active_bg': '#F0D5A0'},
+    'danger': {'bg': '#BF616A', 'fg': '#ECEFF4', 'active_bg': '#D08770'},
+    'info': {'bg': '#88C0D0', 'fg': '#2E3440', 'active_bg': '#9FCAE0'},
+    'secondary': {'bg': '#4C566A', 'fg': '#ECEFF4', 'active_bg': '#5E6B7D'},
+}
+
 class SimpleTheme:
     """Simple, effective dark theme"""
     
@@ -144,11 +154,11 @@ class ModernText(tk.Text):
     
     def __init__(self, parent, **kwargs):
         default_config = {
-            'bg': DARK_THEME['entry_bg'],
-            'fg': DARK_THEME['entry_fg'],
-            'insertbackground': DARK_THEME['fg'],
-            'selectbackground': DARK_THEME['accent'],
-            'selectforeground': DARK_THEME['fg'],
+            'bg': DARK_COLORS['entry_bg'],
+            'fg': DARK_COLORS['entry_fg'],
+            'insertbackground': DARK_COLORS['fg'],
+            'selectbackground': DARK_COLORS['accent'],
+            'selectforeground': DARK_COLORS['fg'],
             'relief': 'flat',
             'borderwidth': 1,
             'font': ('Consolas', 10),

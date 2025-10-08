@@ -1,3 +1,4 @@
+
 # Structural Damage Analyzer - Complete Training & Prediction Suite
 
 A comprehensive GUI application for training and analyzing structural damage in images using U-Net segmentation models with both PyTorch and Keras implementations.
@@ -190,3 +191,4 @@ If you encounter issues:
 ## Credits
 
 Based on the comprehensive damage detection system from [Project_19](https://github.com/mlbkumar9/Project_19) with enhanced GUI interface and additional features for improved usability.
+

@@ -15,6 +15,40 @@ DARK_COLORS = {
     'info': '#00bcf2',         # Info cyan
 }
 
+# Button color configurations
+BUTTON_COLORS = {
+    'primary': {
+        'bg': DARK_COLORS['accent'],
+        'fg': '#ffffff',
+        'active_bg': '#0063b1'
+    },
+    'success': {
+        'bg': DARK_COLORS['success'],
+        'fg': '#ffffff',
+        'active_bg': '#0d6b0d'
+    },
+    'warning': {
+        'bg': DARK_COLORS['warning'],
+        'fg': '#ffffff',
+        'active_bg': '#cc7000'
+    },
+    'danger': {
+        'bg': DARK_COLORS['error'],
+        'fg': '#ffffff',
+        'active_bg': '#a82a2e'
+    },
+    'info': {
+        'bg': DARK_COLORS['info'],
+        'fg': '#ffffff',
+        'active_bg': '#0096c7'
+    },
+    'secondary': {
+        'bg': DARK_COLORS['button_bg'],
+        'fg': '#ffffff',
+        'active_bg': '#505050'
+    }
+}
+
 class SimpleTheme:
     """Simple, effective dark theme"""
     
@@ -96,8 +130,7 @@ class SimpleTheme:
                            arrowcolor=DARK_COLORS['fg'])
 
 class ModernButton(tk.Button):
-    """Custom modern button with hover effects"""
-    
+    """Custom modern button with hover effects"""    
     def __init__(self, parent, text="", command=None, style='primary', **kwargs):
         self.style_name = style
         self.colors = BUTTON_COLORS.get(style, BUTTON_COLORS['primary'])
@@ -140,15 +173,14 @@ class ModernButton(tk.Button):
         self.configure(bg=self.original_bg)
 
 class ModernText(tk.Text):
-    """Custom text widget with dark theme"""
-    
+    """Custom text widget with dark theme"""    
     def __init__(self, parent, **kwargs):
         default_config = {
-            'bg': DARK_THEME['entry_bg'],
-            'fg': DARK_THEME['entry_fg'],
-            'insertbackground': DARK_THEME['fg'],
-            'selectbackground': DARK_THEME['accent'],
-            'selectforeground': DARK_THEME['fg'],
+            'bg': DARK_COLORS['entry_bg'],
+            'fg': DARK_COLORS['entry_fg'],
+            'insertbackground': DARK_COLORS['fg'],
+            'selectbackground': DARK_COLORS['accent'],
+            'selectforeground': DARK_COLORS['fg'],
             'relief': 'flat',
             'borderwidth': 1,
             'font': ('Consolas', 10),
@@ -159,8 +191,7 @@ class ModernText(tk.Text):
         super().__init__(parent, **default_config)
 
 class SimpleButton(tk.Button):
-    """Simple button with dark theme"""
-    
+    """Simple button with dark theme"""    
     def __init__(self, parent, text="", command=None, style='primary', **kwargs):
         colors = {
             'primary': {'bg': DARK_COLORS['accent'], 'fg': 'white'},
@@ -187,8 +218,7 @@ class SimpleButton(tk.Button):
                         **kwargs)
 
 class SimpleText(tk.Text):
-    """Simple text widget with dark theme"""
-    
+    """Simple text widget with dark theme"""    
     def __init__(self, parent, **kwargs):
         super().__init__(parent,
                         bg=DARK_COLORS['entry_bg'],

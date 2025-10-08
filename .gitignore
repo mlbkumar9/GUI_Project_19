@@ -21,7 +21,7 @@ wheels/
 *.egg
 MANIFEST
 
-# PyTorch
+# PyTorch models (large files)
 *.pth
 *.pt
 

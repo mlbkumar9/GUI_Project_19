@@ -1,0 +1,4 @@
+# Place your pretrained model files here
+# Supported formats:
+# - PyTorch: .pt, .pth files
+# - Keras: .h5, .keras files
